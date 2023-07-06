@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+    <title>CO - Pacientes</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/logo.PNG" id="logo" alt="Logo">
+        <h1>Clínica Odontológica</h1>
+    </header>
+    <main>
+        <div class="title-container">
+            <img src="./assets/arrow.svg" id="arrow" alt="Arrow back icon">
+            <h3>Turnos</h3>
+            <div class="box">
+                <form name="search" id="search-form">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        name="search" 
+                        placeholder="Busca un turno por ID.."
+                        onmouseout="this.value = ''; this.blur();">
+                </form>
+            </div>
+        </div>
+        <section class="container">
+            <section>
+                <table>
+                    <thead>
+                        <tr class="table-headers">
+                            <th>Paciente</th>
+                            <th>Odontólogo</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
+                            <th>
+                                <button id="btn-reload">
+                                    <img src="./assets/reload.svg" alt="Reload list">
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="turnoTableBody">      
+                    </tbody>
+                </table>
+            </section>
+            <section class="add-form-section">
+                <h4>Registrar paciente</h4>
+                <form action="" class="form">
+                    <select name="paciente" id="pacientes">
+                        <option value="-">Selecciona el paciente</option>
+                    </select>
+                    <select name="odontologo" id="odontologos">
+                        <option value="-">Selecciona el odontologo</option>
+                    </select>
+                    <label></label>
+                    <input type="datetime-local" id="fecha">
+                    <button type="submit" id="btnAdd" class="btn">Registrar</button>
+                </form>
+            </section>
+            <section class="edit-form-section">
+                <h4>Editar paciente</h4>
+                <form action="" class="form">
+                    <select name="paciente" id="pacientesEdit">
+                        <option value="-">Selecciona el paciente</option>
+                    </select>
+                    <select name="odontologo" id="odontologosEdit">
+                        <option value="-">Selecciona el odontologo</option>
+                    </select>
+                    <label></label>
+                    <input type="datetime-local" id="fechaEdit">
+                    <button type="submit" id="btnEdit" class="btn">Editar</button>
+                </form>
+            </section>
+            <section id="error">
+            </section>
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+    <script src="./js/turnos.js"></script>
+</body>
+</html>

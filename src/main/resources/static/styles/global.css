@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root{
+    --primary-color: #CEDED8;
+    --bg-color: #E6EFEA;
+    --secondary-color: #0d4253;
+    --primary-font-color: #0D110F;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background-color: var(--secondary-color);
+    height: 90px;
+    color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+#logo{
+    width: 138px;
+}
+h1{
+    padding: 20px 12px 20px;
+}
+.title-container{
+    position: relative;
+}
+#arrow{
+    position: absolute;
+    left: 38px;
+    top: 2px;
+}
+h3{
+    text-align: center;
+    margin: 35px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.entidades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+.pacientes,
+.odontologos,
+.turnos,
+.domicilios{
+    width: 500px;
+    height: 344px;
+    border-radius: 20px;
+    margin: 25px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.pacientes h3,
+.odontologos h3,
+.turnos h3,
+.domicilios h3{
+    position: absolute;
+    top: 0;
+    margin: 12px;
+}
+.pacientes{
+    background-image: url(../assets/paciente.svg);
+}
+.odontologos{
+    background-image: url(../assets/odontologo.svg);
+}
+.turnos{
+    background-image: url(../assets/turno.svg);
+}
+.domicilios{
+    background-image: url(../assets/domicilio.svg);
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+h4{
+    padding: 50px;
+    color: var(--primary-font-color);
+    font-size: 1.2rem;
+}
+/*-----------------------Table----------------------------*/
+.table-headers{
+    background-color: var(--primary-color);
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+#edit-img{
+    height: 30px;
+    width: 30px;
+}
+
+/*-----------------------Form----------------------------*/
+.add-form-section, .edit-form-section{
+    width: 502px;
+    text-align: center;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    max-height: 800px;
+}
+.edit-form-section{
+    display: none;
+}
+.add-form-section{
+    display: block;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.form input{
+    background: none;
+    color: var(--primary-font-color);
+    padding: 20px 0;
+    border: none;
+    outline: 0px;
+    width: 285px;
+    font-size: 1rem;
+}
+.form input::placeholder{
+    color: var(--primary-font-color);
+}
+.btn{
+    width: 200px;
+    height: 50px;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+select{
+    background-color: transparent;
+    height: 30px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+/*-----------------------Error----------------------------*/
+.error{
+    color: red;
+    background-color: #f3fffe;
+    border: 1px solid var(--primary-font-color);
+    border-radius: 20px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    height: 220px;
+    padding: 10px;
+    position: absolute;
+    top: 255px;
+    width: 240px;
+}
+#close-error{
+    position: absolute;
+    right: 12px;
+}
+.error p{
+    position: absolute;
+    top: 45px;
+    left: 25px;
+}
+#error-img{
+    position: absolute;
+    bottom: 10px;
+    left: 73px;
+}
+
+/*-----------------------Buscador----------------------------*/
+.box{
+    position: absolute;
+    top: -10px;
+    right: 38px;
+}
+.search-input {
+    padding: 10px;
+    width: 55px;
+    height: 55px;
+    background: none;
+    border: 4px solid var(--secondary-color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    outline: none;
+    transition: .5s;
+}
+.box:hover .search-input{
+    width: 350px;
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+.box i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: var(--secondary-color);
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}

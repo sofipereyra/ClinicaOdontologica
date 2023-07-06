@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+    <title>CO - Odontólogos</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/logo.PNG" id="logo" alt="Logo">
+        <h1>Clínica Odontológica</h1>
+    </header>
+    <main>
+        <div class="title-container">
+            <img src="./assets/arrow.svg" id="arrow" alt="Arrow back icon">
+            <h3>Odontólogos</h3>
+            <div class="box">
+                <form name="search" id="search-form">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        name="search" 
+                        placeholder="Busca un odontologo por ID.."
+                        onmouseout="this.value = ''; this.blur();">
+                </form>
+            </div>
+        </div>
+        <section class="container">
+            <section>
+                <table>
+                    <thead>
+                        <tr class="table-headers">
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Matrícula</th>
+                            <th>Acciones</th>
+                            <th>
+                                <button id="btn-reload">
+                                    <img src="./assets/reload.svg" alt="Reload list">
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="odontologoTableBody">
+                    </tbody>
+                </table>
+            </section>
+            <section class="add-form-section">
+                <h4>Registrar odontólogo</h4>
+                <form action="" class="form">
+                    <label></label>
+                    <input type="text" id="nombre" placeholder="Nombre">
+                    <label></label>
+                    <input type="text" id="apellido" placeholder="Apellido">
+                    <label></label>
+                    <input type="text" id="matricula" placeholder="Matrícula">
+                    <button type="submit" id="btnAdd" class="btn">Registrar</button>
+                </form>
+            </section>
+            <section class="edit-form-section">
+                <h4>Editar odontólogo</h4>
+                <form action="" class="form">
+                    <label></label>
+                    <input type="text" id="nombreEdit" placeholder="Nombre">
+                    <label></label>
+                    <input type="text" id="apellidoEdit" placeholder="Apellido">
+                    <label></label>
+                    <input type="text" id="matriculaEdit" placeholder="Matrícula">
+                    <button type="submit" id="btnEdit" class="btn">Editar</button>
+                </form>
+            </section>
+            <section id="error">
+            </section>
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+    <script src="./js/odontologos.js"></script>
+</body>
+</html>
