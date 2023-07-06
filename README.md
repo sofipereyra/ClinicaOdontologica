@@ -1,4 +1,4 @@
-# Clinica Odontologica
+# Dental Clinic
 Project developed for the Backend subject in the Tech Developer program at Digital House.
 
 ## Objective 
